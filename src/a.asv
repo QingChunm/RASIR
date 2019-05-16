@@ -1,0 +1,11 @@
+   
+load('Q.mat');
+load('V.mat');
+f = fspecial('gaussian',[11 11]);
+f = vec2mat(f
+for type = 1 : 4
+        for idx = 1 : 216
+            % solve the regression approximately
+            filters(:, type, idx) = Q(:, :, type, idx) \ V(:, type, idx);
+        end
+    end
